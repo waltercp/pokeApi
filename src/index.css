@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
+* {
+    font-family: 'Sen', sans-serif;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+    /*display: block;*/
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}

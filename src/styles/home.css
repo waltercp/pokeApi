@@ -1,0 +1,82 @@
+/*
+.pokeHeader {
+    width: 40%;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+*/
+
+.home {
+    min-height: 100vh;
+    background-image: url("pokemonfondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokeLogo {
+ width: 60%;
+ min-width: 280px;
+}
+
+.pokeContain {
+    margin-top: 10px;
+    width: 90%;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pokeContain h2 {
+    font-weight: bold;
+    color: #DD1A1A;
+    font-weight: 800;
+    text-align: center;
+    font-size: min(13vw, 60px);
+}
+
+.pokeContain p{
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    font-size: min(7vw, 30px);
+
+}
+
+
+.formHome{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonHome{
+    height: 40px;
+    color: white;
+    max-width: 400px;
+    width: 50vw;
+    min-width: 250px;
+    font-size: 25px;
+    border: none;
+    background-color: #DD1A1A;
+}
+
+.inputHome{
+    font-size: min(8vw, 30px);
+    max-width: 400px;
+    width: 50vw;
+    min-width: 250px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 0 0 0  1em;
+
+}

@@ -1,0 +1,16 @@
+.typeInfo{
+    width: 120px;
+    font-weight: 700;
+    line-height: 0.5;
+}
+
+.typeInfo h4 {
+    font-size: 12px;
+    font-weight: 500;
+    color:black ;
+    text-transform: uppercase;
+}
+
+.typeInfo p{
+    font-size: 20px;
+}

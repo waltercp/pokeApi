@@ -1,0 +1,19 @@
+.pagination .page-item.active .page-link {
+    background-color: #160101;
+    border-color: #030000;
+  }
+  .pagination .page-link {
+    color: #fdffff;
+    background-color:#D93F3F;
+    border-color: #D93F3F;
+  }
+
+  .pagination .page-item .page-link {
+    font-size: 16px;
+  }
+  .pagination {
+    justify-content: center;
+    margin: 0;
+    background-color:#E5E5E5 ;
+    padding: 1em 0 0 0;
+  }

@@ -1,0 +1,105 @@
+
+
+.cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #E5E5E5;
+    min-height: 100vh;
+}
+
+.cards-container-poke {
+    margin-top: 20px;
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:start;
+    border-radius: 10px;
+}
+
+
+.searchArea {
+    background-color: #0f0e0e;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+}
+
+.welcomeName {
+    font-size: 20px;
+    margin-right: 4rem;
+    color: white;
+
+}
+
+.welcomeName span {
+    color: #0a0a0a;
+    font-weight: bold;
+}
+
+.formArea {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.searchText {
+    width: 300px;
+    height: 40px;
+    background-color: #E5E5E5;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+    border: none;
+    padding: 15px;
+}
+
+.select {
+    cursor: pointer;
+    height: 40px;
+    border: none;
+    width: 200px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+    padding: 5px;
+    background-color: #E5E5E5;
+}
+
+.btm {
+    cursor: pointer;
+    width: 100px;
+    height: 43px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+    border: none;
+    margin-right: 5px;
+    color: white;
+    font-weight: 600;
+    transition: transform 200ms ease;
+}
+
+.btm:hover {
+    transform: scale(1.1);
+}
+
+.btn_search {
+    background-color: #D93F3F;
+}
+
+.pokeHeader {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D93F3F;
+
+}
+
+.pokeHeader img {
+    height: 60px;
+    width: 400px;
+    margin: 0.5em;
+}
