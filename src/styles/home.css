@@ -9,7 +9,7 @@
 
 .home {
     min-height: 100vh;
-    background-image: url("pokemonfondo.png");
+    background-image: url('pokemonfondo.png');
     background-repeat: no-repeat;
     background-size: cover;
     display:flex;
@@ -19,7 +19,7 @@
 }
 
 .pokeLogo {
- width: 60%;
+ width: 50%;
  min-width: 280px;
 }
 

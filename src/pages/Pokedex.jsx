@@ -7,6 +7,7 @@ import PokeType from '../components/Pokedex/PokeType'
 import '../styles/pokedex.css'
 import PokeHeader from '../components/Home/PokeHeader'
 import Paginacion from '../components/Pokedex/Paginacion'
+import Pagination from '../components/Pokedex/pagination'
 
 
 const Pokedex = () => {
@@ -20,6 +21,8 @@ const Pokedex = () => {
   const [forPoke, setForPoke] = useState(false)
   const [pokeType, setPokeType] = useState(false)
 
+  const [pagerickMorty, setPagerickMortt] = useState(8)
+  const [currentPage, setCurrentPage] = useState(1)
 
 
 
@@ -55,6 +58,9 @@ const Pokedex = () => {
 
   }, [pokeSearch, optionType, pokeType]);
 
+  const lastIndex = currentPage * pagerickMorty
+    const firstIndex = lastIndex - pagerickMorty
+
 
   const { trainerName } = useSelector(state => state)
   return (
@@ -78,7 +84,13 @@ const Pokedex = () => {
 
       </div>
 
-    <Paginacion/>
+      <Paginacion />
+      <Pagination
+        pagerickMorty={pagerickMorty}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        poblacion={pokemons?.results.length}
+      />
 
       <div className='cards-container'>
         <div className='cards-container-poke'>
@@ -90,7 +102,7 @@ const Pokedex = () => {
 
               />
 
-            ))
+            )).slice(firstIndex, lastIndex)
           }
 
         </div>
