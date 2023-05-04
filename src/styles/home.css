@@ -9,7 +9,7 @@
 
 .home {
     min-height: 100vh;
-    background-image: url('pokemonfondo.png');
+    background-image: url('pokeFondo.png');
     background-repeat: no-repeat;
     background-size: cover;
     display:flex;

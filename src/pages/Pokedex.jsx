@@ -83,8 +83,6 @@ const Pokedex = () => {
         </div>
 
       </div>
-
-      <Paginacion />
       <Pagination
         pagerickMorty={pagerickMorty}
         currentPage={currentPage}

@@ -1,19 +1,112 @@
-.pagination .page-item.active .page-link {
-    background-color: #160101;
-    border-color: #030000;
-  }
-  .pagination .page-link {
-    color: #fdffff;
-    background-color:#D93F3F;
-    border-color: #D93F3F;
+.pagination{
+  display: flex;
+  gap: 1em;
+  margin-top: 02em;
+  margin-bottom: 3em;
+  max-width: 100%;
+
+  align-items: center;
+  justify-content: center; 
+  padding: 0.5em;
+}
+
+.pagination-previous{
+  border-radius: 0.5em 0 0 0.5em;
+  padding: 0.6em 1.2em;
+  background-color: rgb(125,199,14);
+  color: white;
+  border: 0;
+  transition: transform 300ms ease;
+  
+}
+
+.pagination-previous:hover{
+  transform: scale(1.1);
+}
+
+.pagination-previous:active{
+  background-color: rgb(125,199,14, 80%) ;
+ 
+}
+
+
+.pagination-next{
+  border-radius: 0 0.5em  0.5em 0;
+  padding: 0.6em 1.2em;
+  background-color: rgb(125,199,14);
+  color: white;
+  transition: transform 300ms ease;
+}
+
+.pagination-next:hover{
+  transform: scale(1.1);
+}
+
+
+.pagination-next:active{
+  background-color: rgb(125,199,14, 80%);
+}
+
+
+
+.pagination-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.pagitation-link{
+  background-color: rgb(192, 162, 162, 45%);
+  padding: 0.4em 0.6em;
+  color: white;
+  transition: transform 500ms ease;
+}
+
+.pagitation-link:hover{
+  transform: scale(1.3);
+}
+
+.is-current{
+  background-color: rgb(248, 240, 240);
+  color: #05292E;
+  padding: 0.6em 0.8em;
+}
+
+.is-disabled{
+  pointer-events:none;
+}
+
+
+
+@media (max-width: 700px) {
+
+  .pagination{
+      gap: 0.4em;
   }
 
-  .pagination .page-item .page-link {
-    font-size: 16px;
+  .pagination-list{
+      gap: 0;
   }
-  .pagination {
-    justify-content: center;
-    margin: 0;
-    background-color:#E5E5E5 ;
-    padding: 1em 0 0 0;
+  
+  .pagitation-link{
+      padding: 0;
+      color: rgb(192, 162, 162,0%);
+      width: 0.8em;
+      transition: transform 500ms ease;
   }
+
+  .pagitation-link:hover{
+      transform: scale(1.1);
+  }
+
+  .is-current{
+      background-color: rgb(248, 240, 240);
+      color: #05292E;
+      padding: 0.5em;
+      width: 2rem;
+  }
+}
+
