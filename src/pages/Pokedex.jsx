@@ -6,7 +6,7 @@ import useFetch from '../hooks/useFetch'
 import PokeType from '../components/Pokedex/PokeType'
 import '../styles/pokedex.css'
 import PokeHeader from '../components/Home/PokeHeader'
-import Pagination from '../components/Pokedex/pagination'
+import Pagination from '../components/Pokedex/Pagination'
 
 
 const Pokedex = () => {
@@ -82,7 +82,7 @@ const Pokedex = () => {
         </div>
 
       </div>
-      <Pagination    
+      <Pagination   
         pagerickMorty={pagerickMorty}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
