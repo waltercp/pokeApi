@@ -82,11 +82,12 @@ const Pokedex = () => {
         </div>
 
       </div>
-      <Pagination
+      <Pagination    
         pagerickMorty={pagerickMorty}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         poblacion={pokemons?.results.length}
+        
       />
 
       <div className='cards-container'>

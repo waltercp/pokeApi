@@ -17,6 +17,8 @@ const ForPoke = ({setPokeSearch, setForPoke, setPokeType}) => {
             <input id='searchText' type='text' className='searchText' placeholder='Search pokemon' />
             <button className='btm btn_search'>Search</button>
         </form>
+        
+        
 
     )
 }
