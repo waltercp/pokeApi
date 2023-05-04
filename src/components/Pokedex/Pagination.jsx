@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../../styles/paginacion.css'
 
 
 const Pagination = ({pagerickMorty, currentPage, setCurrentPage, poblacion }) => {

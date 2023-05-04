@@ -6,7 +6,6 @@ import useFetch from '../hooks/useFetch'
 import PokeType from '../components/Pokedex/PokeType'
 import '../styles/pokedex.css'
 import PokeHeader from '../components/Home/PokeHeader'
-import Paginacion from '../components/Pokedex/Paginacion'
 import Pagination from '../components/Pokedex/pagination'
 
 
