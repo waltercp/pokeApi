@@ -14,13 +14,13 @@ const Pokedex = () => {
 
   const [pokemons, setPokemons] = useState()
   const [pokeSearch, setPokeSearch] = useState()
-  const [postPerPage, setPostPerPage] = useState(20)
+  const [postPerPage, setPostPerPage] = useState(900)
   const [optionType, setOptionType] = useState('All')
 
   const [forPoke, setForPoke] = useState(false)
   const [pokeType, setPokeType] = useState(false)
 
-  const [pagerickMorty, setPagerickMortt] = useState(8)
+  const [pagePokemon, setPagePokemon] = useState(30)
   const [currentPage, setCurrentPage] = useState(1)
 
 
@@ -57,8 +57,8 @@ const Pokedex = () => {
 
   }, [pokeSearch, optionType, pokeType]);
 
-  const lastIndex = currentPage * pagerickMorty
-    const firstIndex = lastIndex - pagerickMorty
+  const lastIndex = currentPage * pagePokemon
+    const firstIndex = lastIndex - pagePokemon
 
 
   const { trainerName } = useSelector(state => state)
@@ -83,7 +83,7 @@ const Pokedex = () => {
 
       </div>
       <Pagination   
-        pagerickMorty={pagerickMorty}
+        pagePokemon={pagePokemon}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         poblacion={pokemons?.results.length}
