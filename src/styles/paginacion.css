@@ -95,7 +95,7 @@
   } 
 }
 
-@media (max-width: 550px) {
+@media (max-width: 360px) {
 
   .pagination{
       gap: 0.2em;
