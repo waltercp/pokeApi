@@ -93,13 +93,10 @@
   .pagination-list{
       gap: 0;
   } 
-}
-
-@media (max-width: 360px) {
-
-  .pagination{
-      gap: 0.2em;
-      font-size: 10px;
+  .pagination-previous{
+    padding: 0.6em 0.8em;
+  }
+  .pagination-next{
+    padding: 0.6em 0.8em;
   }
 }
-

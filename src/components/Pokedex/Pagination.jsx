@@ -28,7 +28,7 @@ const Pagination = ({ pagePokemon, currentPage, setCurrentPage, poblacion }) => 
 
     return (
         <nav className='pagination'>
-            <button className={`pagination-previous ${currentPage === 1 ? 'is-disabled' : ''} `} onClick={onPreviusPage} > Anterior</button>
+            <button className={`pagination-previous ${currentPage === 1 ? 'is-disabled' : ''} `} onClick={onPreviusPage} >Back</button>
 
 
 
@@ -85,7 +85,7 @@ const Pagination = ({ pagePokemon, currentPage, setCurrentPage, poblacion }) => 
                 )}
             </ul>
 
-            <button className={`pagination-next ${currentPage >= pageNumbers.length ? 'is-disabled' : ''} `} onClick={onNextsPage}>Siguiente</button>
+            <button className={`pagination-next ${currentPage >= pageNumbers.length ? 'is-disabled' : ''} `} onClick={onNextsPage}>Next</button>
 
         </nav>
     )
