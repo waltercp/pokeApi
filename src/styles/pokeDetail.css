@@ -1,44 +1,48 @@
-.pokemonDetailpage{
-    background-color:#E5E5E5;
+.pokemonDetailpage {
+    background-color: #E5E5E5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
 }
-.imgDetailsPokemon{
+
+.imgDetailsPokemon {
     margin-top: 200px;
     top: -120px;
     position: relative;
     width: 300px;
 }
-.containerDetails{
-width: 80%;
-min-height: 500px;
-margin-top: -300px;
-background: #FFFFFF;
-box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
-padding: 5px 5px 50px 5px;
-border-radius: 5px;
-overflow: hidden;
+
+.containerDetails {
+    width: 90%;
+    min-height: 500px;
+    margin-top: -300px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
+    padding: 5px 5px 50px 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #FCD676;
 }
-.headerDetails{
+
+.headerDetails {
     height: 200px;
     width: 100%;
     text-align: center;
 }
 
-.pokemonsDetailName{
-display: flex;
-height: 150px;
-align-items: center;
-justify-content: center;
+.pokemonsDetailName {
+    display: flex;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
 }
 
-.pokemonId{
+.pokemonId {
     min-width: 100px;
     max-width: 200px;
-    padding:20px 10px;
+    padding: 20px 10px;
     font-size: 40px;
     font-weight: 600;
     margin: 40px auto 0px auto;
@@ -49,37 +53,38 @@ justify-content: center;
 
 }
 
-.linea{
-display: inline-block;
-width: 200px;
-height: 0px;
-border: 1px solid #9F9F9F;
+.linea {
+    display: inline-block;
+    width: 200px;
+    height: 0px;
+    border: 1px solid #9F9F9F;
 }
-.pokemonDetailpage h1{
+
+.pokemonDetailpage h1 {
     margin: 0 20px;
     font-size: 45px;
     display: inline-block;
     width: auto;
 }
 
-.pokemonheight{
+.pokemonheight {
     width: 100%;
-text-align: center;
+    text-align: center;
 }
 
-.pokemonheight li{
+.pokemonheight li {
     margin: auto;
     display: inline-block;
     margin: 0px 50px;
     font-size: 16px;
 }
 
-.pokemonheight li span{
+.pokemonheight li span {
     font-size: 25px;
     display: block;
 }
 
-.typesAndabilities{
+.typesAndabilities {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -87,7 +92,7 @@ text-align: center;
     margin-top: 50px;
 }
 
-.typesAndabilities ul li{
+.typesAndabilities ul li {
     display: inline-block;
     margin: 10px 10px;
     max-width: 150px;
@@ -98,116 +103,126 @@ text-align: center;
     text-transform: capitalize;
 }
 
-.statsSection{
+.statsSection {
     margin: auto;
     width: 80%;
     margin-top: 50px;
 }
 
-.statsHeader{
+.statsHeader {
     display: flex;
     align-items: center;
     margin: 50px 0px;
     justify-content: space-around;
 
 }
-.statsTitle{
+
+.statsTitle {
     margin-right: 20px;
     width: auto;
     font-size: 35px;
 
 }
 
-.separador{
+.separador {
     width: 80%;
     height: 0px;
     border: 1px solid #9F9F9F;
-    }
-
-    .pokeBolaBN{
-        width: 100px;
-        filter: opacity(0.1);
-         margin-left: 40px;
-    }
-    .statsList li{
-        margin-bottom: 30px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        text-transform: capitalize;
-        font-weight: 600;
-    }
-
-    
-.statBaseBar{
- 
-margin-top: 10px;
-height: 30px;
-width: 100%;
-background-color: #F7F7F7;
-border-radius: 4px;
-box-shadow: 0 2px 5px rgba(65, 100, 96, 0.579);
 }
-.statBar{
-height: 100%;
-background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
-border-radius: 4px;
-animation: statsbar 1s 1;
-animation-timing-function:ease-in;
+
+.pokeBolaBN {
+    width: 100px;
+    filter: opacity(0.1);
+    margin-left: 40px;
+}
+
+.statsList li {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+
+.statBaseBar {
+
+    margin-top: 10px;
+    height: 30px;
+    width: 100%;
+    background-color: #F7F7F7;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(65, 100, 96, 0.579);
+}
+
+.statBar {
+    height: 100%;
+    background: linear-gradient(90deg, #FCD676 -2.25%, #E6901E 133.18%);
+    border-radius: 4px;
+    animation: statsbar 1s 1;
+    animation-timing-function: ease-in;
 }
 
 
 @keyframes statsbar {
-    0% {width: 0%;}
+    0% {
+        width: 0%;
     }
-
-
-    .containerMoves{
-        width: 80%;
-        min-height: 500px;
-        margin-top: 50px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
-        padding: 5px 5px 50px 5px;
-        border-radius: 5px;
-        overflow: hidden;
-        }
-.movementsUL{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-between;
 }
 
-.movements{
-background: #E5E5E5;
-border-radius: 50px;
-padding: 5px 30px;
-display: inline-block;
-font-weight: 400;
-font-size: 20px;
-line-height: 28px;
-text-align: center;
-color: #302F2F;
-margin: 10px 0px;
-text-transform: capitalize;
-cursor: pointer;
+
+.containerMoves {
+    width: 80%;
+    min-height: 500px;
+    margin-top: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
+    padding: 5px 5px 50px 5px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.movements:hover{
+.movementsUL {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.movements {
+    background: #E5E5E5;
+    border-radius: 50px;
+    padding: 5px 30px;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #302F2F;
+    margin: 10px 0px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.movements:hover {
     transform: scale(1.09);
 }
+
 @media (max-width: 800px) {
-    .typesAndabilities{
+    .typesAndabilities {
         display: block;
     }
-    .typesAndabilities ul li{
-    width: 100%;
-}
-.pokeBolaBN{
-    display: none;
-}
-.statsTitle{
 
-    margin: auto;
-}
+    .typesAndabilities ul li {
+        width: 100%;
+    }
+
+    .pokeBolaBN {
+        display: none;
+    }
+
+    .statsTitle {
+
+        margin: auto;
+    }
 }

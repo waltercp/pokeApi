@@ -7,6 +7,7 @@ import PokeType from '../components/Pokedex/PokeType'
 import PokeHeader from '../components/Home/PokeHeader'
 import Pagination from '../components/Pokedex/Pagination'
 import '../styles/pokedex.css'
+import { Spinner } from 'react-bootstrap'
 
 const Pokedex = () => {
   const [pokemons, setPokemons] = useState()
@@ -21,6 +22,9 @@ const Pokedex = () => {
   const [currentPage, setCurrentPage] = useState(1)
   const [hasError, setHasError] = useState(false) //mensaje de error
   const [isLoading, setIsLoading] = useState(false);
+  const [nawBar, setNawBar] = useState(true)
+
+
 
 
   useEffect(() => {
@@ -35,9 +39,11 @@ const Pokedex = () => {
           setPokemons({ results: arr });
           setHasError(false)
           setIsLoading(false);
+          setCurrentPage(1)
         },
         err => console.log(err)
       );
+      setPokeSearch(null);
 
     } else if (pokeSearch && forPoke) {
       const url = `https://pokeapi.co/api/v2/pokemon/${pokeSearch}`
@@ -50,6 +56,7 @@ const Pokedex = () => {
           setPokemons(obj)
           setHasError(false)
           setIsLoading(false);
+          setCurrentPage(1)
         },
         err => {
           console.log(err)
@@ -57,10 +64,11 @@ const Pokedex = () => {
           setHasError(true)
           setTimeout(() => {
             setHasError(false)
-            
+
           }, 1800)
         }
       );
+
 
     } else {
       const url = `https://pokeapi.co/api/v2/pokemon?limit=${postPerPage}&offset=0`;
@@ -77,7 +85,7 @@ const Pokedex = () => {
 
   }, [pokeSearch, optionType]);
 
-  console.log(hasError)
+  console.log(nawBar)
 
 
   //Paginacion
@@ -88,9 +96,9 @@ const Pokedex = () => {
   const { trainerName } = useSelector(state => state)
   return (
 
-    <div className='pokePokedex'>
-      <PokeHeader trainerName={trainerName} />
-      <div className='searchArea'>
+    <div className={'pokePokedex '}>
+      <PokeHeader trainerName={trainerName} setNawBar={setNawBar} nawBar={nawBar} />
+      <div className={`searchArea ${nawBar ? 'active' : ''} `}>
         <div className='formArea'>
           <ForPoke
             setPokeSearch={setPokeSearch}
@@ -106,23 +114,33 @@ const Pokedex = () => {
         </div>
 
       </div>
-      <Pagination
-        pagePokemon={pagePokemon}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        poblacion={pokemons?.results.length}
-      />
+      <div className='paginacion-content'>
+        {
+          (pokemons?.results.length > 1)
+            ?
+            <Pagination
+              pagePokemon={pagePokemon}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+              poblacion={pokemons?.results.length}
+            />
+
+            : <></>
+        }
+      </div>
 
       <div className='cards-container'>
         <div className='cards-container-poke'>
           {
-             isLoading
-              ? <h1>cargando</h1>
+            isLoading
+              ? <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+              </Spinner>
 
               : <>
                 {
                   hasError
-                    ? <h1 className='app_error'>❌ Hey! you must provide an id from 1 to 126😫</h1>
+                    ? <h1 className='app_error'>❌ The name of the pokemon does not exist😫</h1>
                     : <>
                       {
                         pokemons?.results.map(pokemon => (
