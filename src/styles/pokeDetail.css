@@ -75,6 +75,8 @@
     padding: 0;
 }
 
+
+
 .pokemonheight li {
     margin: auto;
     display: inline-block;
@@ -106,6 +108,7 @@
     border: 1px solid #D3D3D3;
     font-weight: 600;
     text-transform: capitalize;
+    color: black;
 }
 
 .statsSection {
