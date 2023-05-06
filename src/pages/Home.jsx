@@ -10,7 +10,7 @@ const Home = () => {
       <img className='pokeLogo' src="/pokedexLogo.png" alt="" />
       <div className='pokeContain'>
         <h2>Hello Trainer!</h2>
-        <p>Please give us your name to starrt</p>
+        <p>Please give us your name to start</p>
         <ForNameUser />
       </div>
     </div>

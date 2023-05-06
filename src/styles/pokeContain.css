@@ -58,13 +58,13 @@
 
 /*Lucha*/
 .br__fighting {
-    background:linear-gradient( #96402A, #F1613C 1, #CB735D ) border-box;
+    background:linear-gradient( #96402A, #F1613C, #CB735D ) border-box;
     color:  #96402A;
 }
 
 /*Psiquico*/
 .br__psychic {
-    background:linear-gradient( #FCD676, #E6901E 1, #e6a044 ) border-box;
+    background:linear-gradient( #FCD676, #E6901E, #e6a044 ) border-box;
     color: #E6901E;
 }
 
