@@ -1,171 +1,113 @@
-:root {
-    --grass: linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%) border-box;
-    --grass-text: #416460;
-
-
-    --fire: linear-gradient(176.37deg, #F96D6F -32.26%, #E35825 22.55%, #E8AE1B 125.72%) border-box;
-    --fire-text: #E75C35;
-
-    --water: linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%) border-box;
-    --water-text: #1479FB;
-
-    --bug: linear-gradient(177.56deg, #62DB60 -58.92%, #3BB039 16.57%, #AAFFA8 209.53%) border-box;
-    --bug-text: #4AB648;
-
-    --normal: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%) border-box;
-    --normal-text: #735259;
-
-    --poison: linear-gradient(177.03deg, #5B3184 -11.97%, #A564E3 71.28%, #CE9BFF 135.64%) border-box;
-    --poison-text: #5B3184;
-
-    --electric: linear-gradient(179.75deg, #0C1395 -19.96%, #2B319B 43.67%, #7075D9 138.4%) border-box;
-    --electric-text: #0C1395;
-
-    --ground: linear-gradient(179.75deg, #654008 -19.96%, #895C1A 43.67%, #D69638 138.4%) border-box;
-    --ground-text: #654008;
-
-    --fairy: linear-gradient(179.75deg, #971B45 -19.96%, #C23867 43.67%, #CD7D98 138.4%) border-box;
-    --fairy-text: #971B45;
-
-    --fighting: linear-gradient(176.83deg, #96402A -8.78%, #F1613C 169.09%, #CB735D 242.33%) border-box;
-    --fighting-text: #96402A;
-
-    --psychic: linear-gradient(176.83deg, #FCD676 -2.25%, #E6901E 133.18%, #e6a044 133.18%) border-box;
-    --psychic-text: #E6901E;
-
-    --rock: linear-gradient(177.03deg, #7E7E7E -11.97%, #8D8D94 57.49%, #D3D3D3 135.64%) border-box;
-    --rock-text: #7E7E7E;
-
-    --ghost: linear-gradient(177.03deg, #323569 -11.97%, #454AA8 57.49%, #787DDA 135.64%) border-box;
-    --ghost-text: #323569;
-
-    --ice: linear-gradient(177.03deg, #6FBEDF -11.97%, #64CBF5 47.77%, #BDEBFE 136.72%) border-box;
-    --ice-text: #6FBEDF;
-
-    --dragon: linear-gradient(179.75deg, #478A93 -19.96%, #56A4AE 43.67%, #A2BEC1 138.4%) border-box;
-    --dragon-text: #478A93;
-
-    --dark: linear-gradient(177.03deg, #030706 -11.97%, #0D1211 57.49%, #5A5E5D 135.64%) border-box;
-    --dark-text: #030706;
-
-    --steel: linear-gradient(179.75deg, #5E736C -19.96%, #728881 43.67%, #A8A8A8 138.4%) border-box;
-    --steel-text: #5E736C;
-
-    --flying: linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%) border-box;
-    --flying-text: #735259;
-
-}
-
 /* classes condicionales para fondo y border */
 
 /*Planta*/
 .br__grass {
-    background: linear-gradient(rgb(126, 198, 197), rgb(171, 218, 198), rgb(202, 224, 153)) border-box;
+    background: linear-gradient(#7ec6c5, #abdac6, #cae099) border-box;
     color: #416460;
 }
 
 
 /*Fuego*/
 .br__fire {
-    background: linear-gradient(rgb(249, 109, 111), rgb(227, 88, 37), rgb(232, 174, 27)) border-box;
+    background: linear-gradient(#f96d6f, #e35825, #e8ae1b) border-box;
     color: #E75C35;
     
 }
 
 /*Agua*/
 .br__water {
-    background: linear-gradient(rgb(18, 50, 89), rgb(20, 121, 251), rgb(130, 178, 241)) border-box;
+    background: linear-gradient(#123259, #1479fb, #82b2f1) border-box;
     color: #1479FB;
 }
 
 /*Bicho*/
 .br__bug {
-    background: linear-gradient(rgb(98, 219, 96), rgb(59, 176, 57), rgb(170, 255, 168)) border-box;
+    background: linear-gradient(#62db60, #3bb039, #aaffa8) border-box;
     color: #4AB648;
 }
 
 /*Normal*/
 .br__normal {
-    background: linear-gradient(rgb(115, 82, 89), rgb(188, 107, 124), rgb(124, 63, 76)) border-box;
+    background: linear-gradient(#735259, #bc6b7c, #7c3f4c) border-box;
     color: #735259;
 }
 
 /*Veneno*/
 .br__poison {
-    background: var(--poison);
-    color: var(--poison-text);
+    background:linear-gradient( #5B3184, #A564E3, #CE9BFF ) border-box;
+    color:   #5B3184;
 }
 
 /*Electrico*/
 .br__electric {
-    background: var(--electric);
-    color: var(--electric-text);
+    background:linear-gradient( #0C1395, #2B319B, #7075D9) border-box;
+    color: #0C1395;
 }
 
 /*Tierra*/
 .br__ground {
-    background: var(--ground);
-    color: var(--ground-text);
+    background: linear-gradient( #654008, #895C1A, #D69638) border-box;
+    color: #654008;
 }
 
 /*Hada*/
 .br__fairy {
-    background: var(--fairy);
-    color: var(--fairy-text);
+    background:linear-gradient( #971B45 , #C23867 , #CD7D98) border-box;
+    color:#971B45;
 }
 
 /*Lucha*/
 .br__fighting {
-    background: var(--fighting);
-    color: var(--fighting-text);
+    background:linear-gradient( #96402A, #F1613C 1, #CB735D ) border-box;
+    color:  #96402A;
 }
 
 /*Psiquico*/
 .br__psychic {
-    background: var(--psychic);
-    color: var(--psychic-text);
+    background:linear-gradient( #FCD676, #E6901E 1, #e6a044 ) border-box;
+    color: #E6901E;
 }
 
 /*Roca*/
 .br__rock {
-    background: var(--rock);
-    color: var(--rock-text);
+    background:linear-gradient( #7E7E7E , #8D8D94 , #D3D3D3 ) border-box;
+    color:#7E7E7E;
 }
 
 /*Fantasma*/
 .br__ghost {
-    background: var(--ghost);
-    color: var(--ghost-text);
+    background:linear-gradient( #323569 , #454AA8 , #787DDA ) border-box;
+    color: #323569;
 }
 
 /*Hiealo*/
 .br__ice {
-    background: var(--ice);
-    color: var(--ice-text);
+    background:linear-gradient( #6FBEDF , #64CBF5 , #BDEBFE ) border-box;
+    color: v#6FBEDF;
 }
 
 /*Dragon*/
 .br__dragon {
-    background: var(--dragon);
-    color: var(--dragon-text);
+    background:linear-gradient( #478A93 , #56A4AE , #A2BEC1) border-box;
+    color: #478A93;
 }
 
 /*Oscuro*/
 .br__dark {
-    background: var(--dark);
-    color: var(--dark-text);
+    background:linear-gradient( #030706 , #0D1211 , #5A5E5D ) border-box;
+    color: #030706;
 }
 
 /*Acero*/
 .br__steel {
-    background: var(--steel);
-    color: var(--steel-text);
+    background: linear-gradient( #5E736C , #728881 , #A8A8A8) border-box;
+    color: #5E736C;
 }
 
 /*Volador*/
 .br__flying {
-    background: var(--flying);
-    color: var(--flying-text);
+    background: linear-gradient( #735259, #BC6B7C  #7C3F4C ) border-box;
+    color: #735259;
 }
 
 

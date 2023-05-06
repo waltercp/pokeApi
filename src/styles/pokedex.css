@@ -1,98 +1,4 @@
-.cards-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: #E5E5E5;
-    min-height: 100vh;
-}
-
-.bxs-down-arrow {
-    display: none;
-}
-
-
-.cards-container-poke {
-    width: 95%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: start;
-    border-radius: 10px;
-}
-
-
-.searchArea {
-    background-color: #0f0e0e;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 20px;
-    padding-top: 100px;
-
-}
-
-.welcomeName {
-    font-size: 13px;
-    color: white;
-    padding: 0 1em 0 2em;
-    font-size: clamp(13px, 2vw, 20px);/* ajustar el minimo y el maximo de mi texto*/
-}
-
-.welcomeName span {
-    color: #0a0a0a;
-    font-weight: bold;
-}
-
-.formArea {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.searchText {
-    max-width: 300px;
-    width: 40vw;
-    min-width: 200px;
-    height: 40px;
-    background-color: #E5E5E5;
-    border: none;
-    padding: 15px;
-}
-
-.select {
-    cursor: pointer;
-    height: 40px;
-    border: none;
-    width: 200px;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
-    padding: 5px;
-    background-color: #E5E5E5;
-}
-
-.btm {
-    cursor: pointer;
-    width: 100px;
-    height: 43px;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
-    border: none;
-    margin-right: 5px;
-    color: white;
-    font-weight: 600;
-    transition: transform 200ms ease;
-}
-
-.btm:hover {
-    transform: scale(1.1);
-}
-
-.btn_search {
-    background-color: #D93F3F;
-}
-
+/*PokeHeader*/
 .pokeHeader {
     width: 100%;
     display: flex;
@@ -104,6 +10,42 @@
     min-width: 300px;
 }
 
+.bxs-down-arrow,
+.bxs-up-arrow,
+.buttonArrowNot {
+    display: none;
+}
+
+.buttonArrow {
+    position: fixed;
+    z-index: 500;
+    top: 70px;
+    width: 100%;
+}
+
+.bx-arrow-back {
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+    background-color: #0b0b0b;
+    width: 100%;
+    border: none;
+    padding: 0.1em;
+}
+
+.welcomeName {
+    font-size: 13px;
+    color: white;
+    padding: 0 1em 0 2em;
+    font-size: clamp(14px, 3vw, 20px);
+    /* ajustar el minimo y el maximo de mi texto*/
+}
+
+.welcomeName span {
+    color: #0a0a0a;
+    font-weight: bold;
+}
+
 .pokeHeader img {
     height: 70px;
     max-width: 400px;
@@ -113,7 +55,115 @@
 }
 
 
-@media (max-width: 675px) {
+/*Pokedex*/
+.cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #E5E5E5;
+    min-height: 100vh;
+}
+
+.cards-container-poke {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    border-radius: 10px;
+}
+
+.searchArea {
+    background-color: #0f0e0e;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-top: 100px;
+
+}
+
+.formArea {
+    width: 100%;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+
+                 /*Spiner de Carga de espera*/
+.spinner-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e80707;
+}
+
+.spinner {
+    font-size: 8rem;
+    /* Modificar tamaño del Spinner */
+}
+
+.app_error {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: clamp(20px, 4vw, 30px);
+    text-align: center;
+
+}
+
+
+
+/*ForPoke buscar pokemon por nombre*/
+.searchText {
+    max-width: 300px;
+    width: 40vw;
+    min-width: 150px;
+    height: 40px;
+    background-color: #E5E5E5;
+    border: none;
+    padding: 15px;
+    outline: none;
+}
+
+.btn_search {
+    cursor: pointer;
+    height: 43px;
+    border: none;
+    margin-right: 5px;
+    color: white;
+    font-weight: 600;
+    transition: transform 200ms ease;
+    background-color: #D93F3F;
+    max-width: 100px;
+    width: 20vw;
+    min-width: 80px;
+}
+
+.btn_search:hover {
+    transform: scale(1.1);
+}
+
+
+
+/*TypePokemon Buscar pokemonpor tipo*/
+
+.select {
+    cursor: pointer;
+    height: 40px;
+    width: 200px;
+    border: none;
+    padding: 5px;
+    background-color: #E5E5E5;
+    outline: none;
+}
+
+
+
+@media (max-width: 700px) {
     .pokeHeader {
         justify-content: center;
         align-items: center;
@@ -127,13 +177,37 @@
         left: 7px;
     }
 
-    .bxs-down-arrow {
+    .menuResponsiveUp {
+        position: fixed;
+        z-index: 3000;
+        top: 220px;
+        left: 48%;
+        background-color: #E5E5E5;
+        border-radius: 50%;
+        padding: 0.1em;
+        margin: 0;
+    }
+
+    .buttonArrow {
+        top: 100px;
+    }
+
+    .bx-arrow-back {
+        padding: 0.1em;
+    }
+
+    .bxs-down-arrow,
+    .bxs-up-arrow {
         display: inline-block;
         font-size: 40px;
     }
 
+
     .formArea {
         gap: 1em;
+        flex-direction: column;
+        margin-top: 10px;
+        min-width: 260px;
     }
 
     .searchArea {
@@ -143,17 +217,13 @@
         left: 0;
         width: 100%;
         height: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: end;
         transition: top .5s;
         z-index: 1000;
     }
 
     .active {
         top: 0;
-        height: 38vh;
+        height: 240px;
         z-index: 100;
     }
 
@@ -163,5 +233,12 @@
 
     .paginacion-content {
         padding-top: 90px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .buttonArrow {
+        top: 90px;
     }
 }

@@ -1,16 +1,14 @@
-.pagination{
+.pagination {
   display: flex;
   max-width: 100%;
   align-items: center;
-  justify-content: center; 
-  gap: 1em ;
+  justify-content: center;
+  gap: 1em;
   background-color: #E5E5E5;
   padding-top: 1.4em;
 }
 
-
-
-.pagination-previous{
+.pagination-previous {
   border-radius: 0.5em 0 0 0.5em;
   padding: 0.6em 1.2em;
   background-color: #D93F3F;
@@ -19,17 +17,17 @@
   transition: transform 300ms ease;
 }
 
-.pagination-previous:hover{
+.pagination-previous:hover {
   transform: scale(1.1);
 }
 
-.pagination-previous:active{
-  background-color: rgb(217, 63, 63,80%) ;
- 
+.pagination-previous:active {
+  background-color: rgb(217, 63, 63, 80%);
+
 }
 
 
-.pagination-next{
+.pagination-next {
   border-radius: 0 0.5em 0.5em 0;
   padding: 0.6em 1.2em;
   background-color: #D93F3F;
@@ -38,28 +36,25 @@
   transition: transform 300ms ease;
 }
 
-.pagination-next:hover{
+.pagination-next:hover {
   transform: scale(1.1);
 }
 
 
-.pagination-next:active{
-  background-color: rgb(217, 63, 63,80%);
+.pagination-next:active {
+  background-color: rgb(217, 63, 63, 80%);
 }
 
-
-
-.pagination-list{
+.pagination-list {
   display: flex;
   flex-direction: row;
   gap: 0.5em;
-  padding:0;
+  padding: 0;
   margin: 0;
-
 }
 
 
-.pagitation-link{
+.pagitation-link {
   background-color: #D93F3F;
   padding: 0.3em 0.7em;
   color: white;
@@ -67,36 +62,36 @@
   border: none;
 }
 
-.pagitation-link:hover{
+.pagitation-link:hover {
   transform: scale(1.2);
 }
 
-.is-current{
+.is-current {
   background-color: rgb(11, 10, 10);
   color: white;
 }
 
-.is-disabled{
-  pointer-events:none;
+.is-disabled {
+  pointer-events: none;
 }
 
 
 
 @media (max-width: 480px) {
-
-  .pagination{
-      gap: 0.2em;
-      font-size: 13px;
-
+  .pagination {
+    gap: 0.3em;
+    font-size: 13px;
   }
 
-  .pagination-list{
-      gap: 0;
-  } 
-  .pagination-previous{
+  .pagination-list {
+    gap: 0.1em;
+  }
+
+  .pagination-previous {
     padding: 0.6em 0.8em;
   }
-  .pagination-next{
+
+  .pagination-next {
     padding: 0.6em 0.8em;
   }
 }

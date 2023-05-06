@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import {  useParams } from 'react-router-dom'
 import useFetch from '../hooks/useFetch'
 import '../styles/pokeDetail.css'
+import PokeHeader from '../components/Home/PokeHeader'
+
 
 const PokemonDetails = () => {
     const [pokeInfo, setPokeInfo] = useState()
@@ -10,28 +12,50 @@ const PokemonDetails = () => {
     const { name } = useParams()
     const ulRef = useRef()
 
+    const [buttonBack, setButtonBack] = useState(false)
+
+  
     useEffect(() => {
         const url = `https://pokeapi.co/api/v2/pokemon/${name}/`
+        setButtonBack(true)
         useFetch(
-          url,
-          res => setPokeInfo(res.data),
-          err => console.log(err)
+            url,
+            res => setPokeInfo(res.data),
+            err => console.log(err)
         )
+    }, [])
+
+    useEffect(() => {
+        const handleScroll = ()=>{
+          const ul = ulRef.current
+          const {y} = ul.getBoundingClientRect()
+      
+          const animation = y<= 860 ? 'block': 'none'
+          
+          setAnimationName(animation)
+      
+        }
+        window.addEventListener('scroll', handleScroll)
+        return ()=>{
+        window.removeEventListener('scroll', handleScroll)
+      }
       }, [])
 
 
     return (
         <div>
+            <PokeHeader setButtonBack={setButtonBack} buttonBack={buttonBack} />
+        
             <article className='pokemonDetailpage'>
                 <img className='imgDetailsPokemon' src={pokeInfo?.sprites.other['official-artwork'].front_default} />
 
                 <div className='containerDetails'>
                     <header className={`headerDetails br__${pokeInfo?.types[0].type.name}`}>
                     </header>
-                    <div className={`pokemonId text__${pokeInfo?.types[0].type.name}`}>#{pokeInfo?.id}</div>
+                    <div className={`pokemonId br__${pokeInfo?.types[0].type.name}`}>#{pokeInfo?.id}</div>
                     <div className='pokemonsDetailName'>
                         <div className='linea'></div>
-                        <h1 className={`text__${pokeInfo?.types[0].type.name}`}>{name}</h1>
+                        <h1 className={`br__${pokeInfo?.types[0].type.name}`}>{name}</h1>
                         <div className='linea'></div>
                     </div>
                     <ul className='pokemonheight'>
@@ -44,7 +68,7 @@ const PokemonDetails = () => {
                             <h3>Type</h3>
                             {
                                 pokeInfo?.types.map(type => (
-                                    <li className={`features btn__${type.type.name}`} key={type.type.url}>{type.type.name}</li>
+                                    <li className={`features br__${type.type.name}`} key={type.type.url}>{type.type.name}</li>
                                 ))
                             }
                         </ul>
@@ -56,6 +80,7 @@ const PokemonDetails = () => {
                                 ))
                             }
                         </ul>
+
                     </div>
                     <div className='statsSection'>
 

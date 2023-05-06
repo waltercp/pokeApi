@@ -23,7 +23,7 @@ const ForNameUser = () => {
 
     return (
         <form className='formHome' onSubmit={handleSubmit}>
-            <input className='inputHome' ref={inputName} type="text" />
+            <input className='inputHome' ref={inputName} type="text"  placeholder="Your Name..."  />
             <button className='buttonHome'>Start</button>
         </form>
     )

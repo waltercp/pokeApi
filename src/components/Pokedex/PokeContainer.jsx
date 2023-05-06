@@ -10,6 +10,7 @@ const PokeContainer = ({ url }) => {
 
   const [pokemon, setPokemon] = useState()
   const [loading, setLoading] = useState(true);  // Saber si las Imagenes ya cargaron
+  
 
   useEffect(() => {
     setLoading(true)
@@ -39,7 +40,7 @@ const PokeContainer = ({ url }) => {
 
   const navigate = useNavigate()
   const handleClick = () => navigate(`/pokedex/${pokemon.name}`)
-
+  
 
   return (
     <article className={`Pokecard br__${clase}`}>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
 import ForPoke from '../components/Pokedex/ForPoke'
 import PokeContainer from '../components/Pokedex/PokeContainer'
 import useFetch from '../hooks/useFetch'
@@ -65,7 +64,7 @@ const Pokedex = () => {
           setTimeout(() => {
             setHasError(false)
 
-          }, 1800)
+          }, 2000)
         }
       );
 
@@ -93,11 +92,11 @@ const Pokedex = () => {
   const firstIndex = lastIndex - pagePokemon
 
 
-  const { trainerName } = useSelector(state => state)
+  
   return (
 
     <div className={'pokePokedex '}>
-      <PokeHeader trainerName={trainerName} setNawBar={setNawBar} nawBar={nawBar} />
+      <PokeHeader setNawBar={setNawBar} nawBar={nawBar} />
       <div className={`searchArea ${nawBar ? 'active' : ''} `}>
         <div className='formArea'>
           <ForPoke
@@ -133,9 +132,11 @@ const Pokedex = () => {
         <div className='cards-container-poke'>
           {
             isLoading
-              ? <Spinner animation="border" role="status">
-                <span className="visually-hidden">Loading...</span>
-              </Spinner>
+              ? <div className="spinner-container">
+                <Spinner className="spinner" animation="border" role="status">
+                  <span className="visually-hidden">Loading...</span>
+                </Spinner>
+              </div>
 
               : <>
                 {
