@@ -79,12 +79,12 @@
 
 @media (max-width: 480px) {
   .pagination {
-    gap: 0.3em;
+    gap: 0.4em;
     font-size: 13px;
   }
 
   .pagination-list {
-    gap: 0.1em;
+    gap: 0.3em;
   }
 
   .pagination-previous {
