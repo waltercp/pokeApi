@@ -185,6 +185,7 @@
     padding: 5px 5px 50px 5px;
     border-radius: 5px;
     overflow: hidden;
+    margin-bottom: 2em;
 }
 
 .movementsUL {
@@ -193,7 +194,7 @@
     justify-content: center;
     padding: 0;
     gap: 0.5em;
-
+    margin: 0;
 }
 
 .movements {
@@ -241,13 +242,24 @@
     .containerDetails{
         margin-top: -150px;
     }
+
+    .movements {
+        font-size: 15px;
+        padding: 1em;
+    }
+    .containerMoves {
+        padding: 5px 0 50px 0;
+    }
+    
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 500px){
     .movements {
-        width: 80%;
+        font-size: 10px;
+        padding: 0.5em;
+        width: 60px;
+        border-radius: 1em;
+        margin: 0; 
     }
-    
-
 }

@@ -106,7 +106,7 @@
 
 /*Volador*/
 .br__flying {
-    background: linear-gradient( #735259, #BC6B7C  #7C3F4C ) border-box;
+    background: linear-gradient( #735259, #BC6B7C , #7C3F4C ) border-box;
     color: #735259;
 }
 
