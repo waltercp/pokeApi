@@ -256,9 +256,9 @@
 
 @media (max-width: 500px){
     .movements {
-        font-size: 10px;
+        font-size: 9px;
         padding: 0.5em;
-        width: 60px;
+        width: 55px;
         border-radius: 1em;
         margin: 0; 
     }
